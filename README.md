@@ -32,10 +32,10 @@ its services, and allows visitors to request a quote or get in touch.
 ## Timeline and Milestones
 | Milestone | Target |
 |---|---|
-| Website Project Proposal | Part 1 due date |
-| HTML structure (all 5 pages) | Part 1 due date |
-| CSS styling and responsive design | Part 2 due date |
-| JavaScript functionality and SEO | Part 3 due date |
+| Website Project Proposal | 10 August 2026|
+| HTML structure (all 5 pages) | 14 August 2026 |
+| CSS styling and responsive design | 18 September 2026 |
+| JavaScript functionality and SEO | 22 October 2026 |
 
 ## Part 1 Details
 This submission (Part 1) includes:
