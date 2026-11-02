@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T.C. Carpentry | Get a Quote</title>
+  <title>Get a Carpentry Quote in Sandton | T.C. Carpentry</title>
+  <meta name="description" content="Request a carpentry quote from T.C. Carpentry in Sandton. Choose your service, project size and date to see an estimated cost.">
+  <meta name="keywords" content="carpentry quote Sandton, carpenter prices Gauteng, kitchen fitting quote">
+  <meta name="author" content="Sinakhokonke Msibi, T.C. Carpentry">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,6 +15,7 @@
     <h1>T.C. Carpentry</h1>
     <p>Sandton &bull; Custom Carpentry</p>
 
+    <button class="menu-toggle" aria-label="Open menu">&#9776; Menu</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -24,7 +28,51 @@
   </header>
 
   <main>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTzg_NLXrKquNCsl-rsFPkFBVXM81ftrf9ROMX0lDWPxqWxQ/viewform?embedded=true" width="640" height="1012" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <h2>Request a Quote</h2>
+    <p>Fill in the form to see an estimated cost and our availability.</p>
+    <form id="enquiry-form" action="enquiry.html" method="post" novalidate>
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" minlength="2" required>
+      <span class="error" id="name-error"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="email-error"></span>
+
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" placeholder="0821234567" required>
+      <span class="error" id="phone-error"></span>
+
+      <label for="service">Service</label>
+      <select id="service" name="service" required>
+        <option value="">-- Choose a service --</option>
+        <option>Custom Furniture</option>
+        <option>Kitchen Fitting</option>
+        <option>Structural Carpentry</option>
+        <option>General Repairs</option>
+      </select>
+      <span class="error" id="service-error"></span>
+
+      <label>Project size</label>
+      <div class="option"><input type="radio" id="size-small" name="size" value="Small"><label for="size-small">Small</label></div>
+      <div class="option"><input type="radio" id="size-medium" name="size" value="Medium"><label for="size-medium">Medium</label></div>
+      <div class="option"><input type="radio" id="size-large" name="size" value="Large"><label for="size-large">Large</label></div>
+      <span class="error" id="size-error"></span>
+
+      <label>Extras</label>
+      <div class="option"><input type="checkbox" id="materials" name="extras" value="materials"><label for="materials">Materials supplied</label></div>
+      <div class="option"><input type="checkbox" id="delivery" name="extras" value="delivery"><label for="delivery">Delivery</label></div>
+
+      <label for="date">Preferred start date</label>
+      <input type="date" id="date" name="date" required>
+      <span class="error" id="date-error"></span>
+
+      <label for="details">Extra details (optional)</label>
+      <textarea id="details" name="details" maxlength="300"></textarea>
+
+      <button type="submit" class="btn">Get Estimate</button>
+    </form>
+    <div id="enquiry-response" class="response-box"></div>
     
   </main>
 
@@ -33,5 +81,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/enquiry.js"></script>
 </body>
 </html>

@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T.C. Carpentry | Services</title>
+  <title>Carpentry Services in Sandton | T.C. Carpentry</title>
+  <meta name="description" content="Custom furniture, kitchen fitting, structural carpentry and general repairs for homes and businesses across Sandton and Gauteng.">
+  <meta name="keywords" content="carpentry services Sandton, custom furniture, kitchen fitting, structural carpentry, wood repairs">
+  <meta name="author" content="Sinakhokonke Msibi, T.C. Carpentry">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,6 +15,7 @@
     <h1>T.C. Carpentry</h1>
     <p>Sandton &bull; Custom Carpentry</p>
 
+    <button class="menu-toggle" aria-label="Open menu">&#9776; Menu</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -30,41 +34,24 @@
     <picture>
       <source media="(max-width: 480px)" srcset="images/responsive/workbench-tools-480w.jpg">
       <source media="(max-width: 768px)" srcset="images/responsive/workbench-tools-800w.jpg">
-      <img class="responsive-image" src="images/responsive/workbench-tools-1200w.jpg" alt="Carpentry tools laid out on a workbench">
+      <img class="responsive-image" src="images/responsive/workbench-tools-1200w.jpg" alt="Angle grinder, steel ruler and set square laid out on a timber workbench">
     </picture>
 
-    <div class="container">
-      <div>
-        <span class="icon"></span>
-        <h3>Custom Furniture</h3>
-        <p>Tables, chairs, beds, cabinets, and bespoke pieces designed and
-        built to your exact measurements and style.</p>
-      </div>
-
-      <div>
-        <span class="icon"></span>
-        <h3>Kitchen Fitting</h3>
-        <p>Complete kitchen cupboard installs - from initial measure-up
-        to the final fitted finish.</p>
-      </div>
-
-      <div>
-        <span class="icon"></span>
-        <h3>Structural Carpentry</h3>
-        <p>Decking, roof timber work, staircase,  and structural carpentry for
-        residential and commercial sites.</p>
-      </div>
-
-      <div>
-        <span class="icon"></span>
-        <h3>General Repairs</h3>
-        <p>Sticking doors, broken drawers, loose joints, and general
-        wood repairs around the home.</p>
-      </div>
+    <div class="search-bar">
+      <label for="service-search">Search services</label>
+      <input type="text" id="service-search" placeholder="e.g. kitchen">
+      <label for="service-sort">Sort by</label>
+      <select id="service-sort">
+        <option value="az">Name (A to Z)</option>
+        <option value="za">Name (Z to A)</option>
+      </select>
     </div>
+    <p id="service-count"></p>
+    <div class="container" id="services-list"></div>
+    <a class="btn" href="enquiry.html">Request a Quote</a>
 
     <h2>Built With Care, Step by Step</h2>
-    <img class="responsive-image" src="images/furniture-assembly.jpg" alt="Furniture assembly plans with dowels, screws and nails">
+    <img class="responsive-image" src="images/furniture-assembly.jpg" alt="Furniture assembly plan with a hammer, screwdrivers, dowels, screws and nails">
     <p>
       Every piece of furniture we build starts with careful planning
       from measuring and marking out, to assembling each joint by hand.
@@ -78,5 +65,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
 </body>
 </html>
