@@ -1,12 +1,17 @@
 # T.C. Carpentry — Website Project
 
 ## Project Title
-T.C. Carpentry Website (WEDE5020 POE — Part 2)
+T.C. Carpentry Website (WEDE5020 POE — Part 3)
 
 ## Student Information
 - Name & Surname: Sinakhokonke S'phelele Msibi
 - Student Number: ST10508054
 - Group: 5
+
+## Links
+- GitHub repository: https://github.com/iNdlondloencane/WEDE5020_POE
+
+- Published site (GitHub Pages): https://indlondloencane.github.io/WEDE5020_POE/
 
 ## Project Overview
 A five-page website for T.C. Carpentry, a family-run carpentry business
@@ -25,17 +30,17 @@ its services, and allows visitors to request a quote or get in touch.
 - About Us page with company history, mission, vision, and team.
 - Services page detailing all four core services.
 - Enquiry page with a quote request form (name, email, phone, service, message).
-- Contact page with two business locations (embedded maps) and a native
+- Contact page with an interactive Leaflet map of the two business locations and a native
   contact form (name, email, message).
 - Consistent navigation menu across all five pages.
 
 ## Timeline and Milestones
 | Milestone | Target |
 |---|---|
-| Website Project Proposal | 10 August 2026|
-| HTML structure (all 5 pages) | 14 August 2026 |
-| CSS styling and responsive design | 18 September 2026 |
-| JavaScript functionality and SEO | 22 October 2026 |
+| Website Project Proposal | Part 1 due date |
+| HTML structure (all 5 pages) | Part 1 due date |
+| CSS styling and responsive design | Part 2 due date |
+| JavaScript functionality and SEO | Part 3 due date |
 
 ## Part 1 Details
 This submission (Part 1) includes:
@@ -81,14 +86,32 @@ This submission (Part 2) includes:
 ### Screenshot Evidence
 | Page | Desktop | Tablet | Mobile |
 |---|---|---|---|
-| Home | `screenshots/home-desktop.png` | `screenshots/home-tablet.png` | `screenshots/home-mobile.png` |
-| About | `screenshots/about-desktop.png` | `screenshots/about-tablet.png` | `screenshots/about-mobile.png` |
-| Services | `screenshots/services-desktop.png` | `screenshots/services-tablet.png` | `screenshots/services-mobile.png` |
-| Get a Quote | `screenshots/enquiry-desktop.png` | `screenshots/enquiry-tablet.png` | `screenshots/enquiry-mobile.png` |
-| Contact | `screenshots/contact-desktop.png` | `screenshots/contact-tablet.png` | `screenshots/contact-mobile.png` |
+| Home | `ScreenShots/Homepage screenshot.png` | `ScreenShots/Home page- ipad screenshot.png` | `ScreenShots/Home page- mobile screenshot.png` |
+| About | `ScreenShots/About Us page Screenshot.png` | `ScreenShots/About us- ipad screenshot.png` | `ScreenShots/About us page - mobile screenshot.png` |
+| Services | `ScreenShots/Services page Screenshot.png` | `ScreenShots/Services page-ipad screenshot.png` | `ScreenShots/Services page - mobile screenshot.png` |
+| Get a Quote | `ScreenShots/Enquiry page (Get a quote) screenshot.png` | `ScreenShots/Get a Quote : Enquiry- ipad screenshot.png` | `ScreenShots/Get a quote : enquiry page - mobile screenshot.png` |
+| Contact | `ScreenShots/Contacts page Screenshot.png` | `ScreenShots/Contacts page - ipad screenshot.png` | `ScreenShots/Contact page - mobile screenshot.png` |
 
-Part 3 (JavaScript functionality and SEO) will follow in a future
-submission/edit.
+## Part 3 Details
+- **Interactive elements:** accordion on the About page (Mission/Vision) and a
+  fade-in animation when the page loads (CSS transition + JavaScript) in `js/main.js`.
+- **Interactive map:** Leaflet + OpenStreetMap map on the Contact page that zooms to fit
+  both locations, with a popup and a "Get directions" link for each marker (`js/map.js`).
+- **Gallery lightbox:** clicking a homepage photo opens it full size with a caption and
+  previous/next arrows (also the left/right keys); click the dark background, the X or
+  press Escape to close (`js/lightbox.js`).
+- **Dynamic content and search:** the Services page builds its cards from a
+  JavaScript array, with a search box and an A-Z / Z-A sort (`js/services.js`).
+- **Enquiry form:** text, email, phone, dropdown, radio buttons, checkboxes,
+  date and textarea; JavaScript validation with error messages; shows an
+  estimated cost and availability (`js/enquiry.js`).
+- **Contact form:** validated, then compiled into an email that the visitor sends
+  with the "Send Email" button (a `mailto:` link that opens their email app) to the
+  recipient set in `js/contact.js`.
+- **SEO:** keyword-based title tags, meta descriptions and meta keywords on every
+  page, one `h1` with ordered `h2`/`h3` headings, descriptive alt text, internal
+  links between pages, `robots.txt` and `sitemap.xml`, clean lowercase page URLs.
+- **Deployment and security:** deployed on GitHub Pages, which serves the site over HTTPS.
 
 ## Sitemap
 ```
@@ -155,6 +178,31 @@ navigation menu on every page.
 - 18 September 2026 — Converted the one remaining `rem` value (`.icon` font size)
   to `px`, so sizing is consistent px throughout the stylesheet.
 
+### Part 3
+- 30 October 2026 — Reviewed Part 2 feedback (80/100). Three points were raised and fixed below.
+- 30 October 2026 — Feedback: "iframe for html form is not acceptable". Removed the embedded Google Form from the enquiry page and built a native HTML form with JavaScript validation (see the enquiry entry below). The Google Maps iframes on the Contact page were also replaced with a Leaflet map.
+- 30 October 2026 — Feedback: "mobile responsiveness is not proper". On screens 768px and narrower the navigation is now hidden behind a Menu button (`.menu-toggle`, opened and closed in `js/main.js`) instead of a tall stack of links; header padding and link spacing were reduced so content starts higher on the screen.
+- 30 October 2026 — Feedback: references. The four separate MDN entries were merged into one MDN Web Docs entry, and sources that were not used (Google Maps embed) were removed. The list now has one entry per source, in a consistent format.
+- 30 October 2026 — Added `js/main.js` features: page-load fade-in animation and an accordion.
+- 30 October 2026 — Converted Mission and Vision on the About page into an accordion.
+- 30 October 2026 — Added a gallery lightbox to the homepage photos (`js/lightbox.js`).
+- 30 October 2026 — Replaced the two Google Maps iframes with one interactive Leaflet map showing both locations (`js/map.js`).
+- 30 October 2026 — Services page now loads its cards from JavaScript, with search and sort (`js/services.js`).
+- 30 October 2026 — Replaced the Google Form on the enquiry page with a native form, JavaScript validation and a cost/availability response (`js/enquiry.js`).
+- 30 October 2026 — Added JavaScript validation and an email-ready response to the contact form (`js/contact.js`; shared helpers in `js/validation.js`).
+- 30 October 2026 — SEO: new title tags, meta descriptions and meta keywords on all pages; improved image alt text; renamed the About photo to `founder-photo.png`; added internal links and quote buttons; added `robots.txt` and `sitemap.xml`.
+- 30 October 2026 — Converted the `.icon` font size from `rem` to `px` for consistent units.
+- 2 November 2026 — Rewrote all JavaScript using the techniques from the WEDE5020 JavaScript notes: `let`/`const`, `===`/`!==`, standard function declarations, `forEach`, `includes`, `push`/`unshift`, `switch` and `return`.
+- 2 November 2026 — Added `js/validation.js` with reusable helper functions (`showError`, `clearError`, `isValidEmail`, `isValidPhone`, `addToBox`) shared by both forms; each form now uses a `validateForm()` function that returns an array of errors.
+- 2 November 2026 — Fixed the enquiry date check so a chosen weekday is read as a local date, and replaced `innerHTML` with `textContent` for visitor-typed text in the form responses.
+- 2 November 2026 — Services search now ignores spaces and capital letters and shows a message when nothing matches; the lightbox also closes with the Escape key; the map shows the two addresses as text if the map library fails to load.
+- 2 November 2026 — Added a `<meta name="author">` tag to all five pages.
+- 2 November 2026 — Added `isValidName()` to `js/validation.js` so names with numbers are rejected on both forms.
+- 2 November 2026 — Lightbox now has previous/next arrows, a caption, keyboard arrow keys, and loads the best-sized image for the screen.
+- 2 November 2026 — Map now zooms to fit both locations and each popup has a "Get directions" link.
+- 2 November 2026 — README: corrected the title to Part 3, added repository and Pages links, fixed photo credits and reference formatting.
+- 2 November 2026 — SEO: renamed the Unsplash photos to descriptive file names (e.g. `spiral-timber-staircase-wrought-iron-balustrade-800w.jpg`) and rewrote the alt text on the homepage, About and Services images so each describes what the picture shows.
+
 ## Photo Credits
 All photography used on this site is sourced from Pexels and unSplash (free-to-use
 licence, no attribution legally required, credited here as good practice):
@@ -162,18 +210,15 @@ licence, no attribution legally required, credited here as good practice):
 - Workbench tools photo (Services page banner) — Photo by Ron Lach, Pexels.
 - Sketching plans photo (About page) — Photo by Tima Miroshnichenko, Pexels.
 - Furniture assembly photo (Services page) — Photo by Athena, Pexels.
-- Staircase photo (homepage) - photo by zac gudakov, unsplash 
-- CEO photo (About page) - photo by sinakhokonke msibi edited on chatgbt 
+- Staircase photo (homepage) — Photo by Zac Gudakov, Unsplash.
+- Homepage photos — Photos by Jared Brashier, Paul Schnurle, Nayron Toledo and PYX Photography, Unsplash.
+- CEO photo (About page) — Photo by Sinakhokonke Msibi, edited with ChatGPT.
 
 ## References
-- Colour palette and typography based on the approved Website Project
-  Proposal for T.C. Carpentry.
-- Google Maps embed used on the Contact page: https://www.google.com/maps
-  (no API key required for basic `output=embed` iframes).
-- Photography: Pexels (https://www.pexels.com) — see Photo Credits above.
-- MDN Web Docs — CSS Grid Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
-- MDN Web Docs — Using media queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
-- MDN Web Docs — Responsive images (`srcset`/`sizes`/`picture`):
-  https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images
-- MDN Web Docs — CSS pseudo-classes (`:hover`, `:focus`, `:active`):
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+Colour palette and typography follow the approved Website Project Proposal for T.C. Carpentry.
+
+- Leaflet (2023) *Leaflet quick start guide*. Available at: https://leafletjs.com/examples/quick-start/ (Accessed: 2 November 2026).
+- Mozilla (n.d.) *MDN Web Docs*. Available at: https://developer.mozilla.org (Accessed: 2 November 2026).
+- OpenStreetMap contributors (n.d.) *Copyright and licence*. Available at: https://www.openstreetmap.org/copyright (Accessed: 2 November 2026).
+- Pexels (n.d.) *Free stock photos*. Available at: https://www.pexels.com (Accessed: 2 November 2026).
+- Unsplash (n.d.) *Free photos*. Available at: https://unsplash.com (Accessed: 2 November 2026).
